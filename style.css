@@ -148,6 +148,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #000;
 }
 
 .header_logo img {
@@ -164,7 +165,6 @@ a {
 .explorer_description {
   background-color: #ececec;
   padding: 2rem;
-  margin-bottom: 2rem;
 }
 .explorer_description h1 {
   font-size: 1.3rem;
@@ -182,10 +182,7 @@ a {
   font-weight: 600;
   padding-bottom: 0.5rem;
   padding-left: 1rem;
-}
-
-.running_main {
-  margin-bottom: 2rem;
+  padding-top: 2rem;
 }
 
 .running_container {
@@ -193,11 +190,84 @@ a {
   flex-direction: row;
   align-items: center;
   padding: 1rem 0;
-  margin: 0.7rem 0;
+  margin: 0.7rem auto 0 auto;
   background-color: #eeeeee;
+  width: 90%;
+  font-weight: 500;
 }
 .running_container i {
   padding: 0 1.3rem;
+}
+
+.restaurant_intro {
+  background-color: #eeeeee;
+  padding-bottom: 2rem;
+}
+
+.restaurant_intro_title {
+  margin-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.restaurant_intro_cards {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.restaurant_intro_article {
+  margin-bottom: 1rem;
+}
+.restaurant_intro_article img {
+  object-fit: cover;
+  width: 100%;
+  height: 45vw;
+  border-radius: 1rem 1rem 0 0;
+}
+.restaurant_intro_article_body {
+  border-radius: 0 0 1rem 1rem;
+  background-color: #fff;
+  text-align: left;
+  padding-left: 1rem;
+  position: relative;
+}
+.restaurant_intro_article_body h2 {
+  padding-top: 0.8rem;
+  font-weight: 600;
+}
+.restaurant_intro_article_body h3 {
+  padding: 0.5rem 0 0.8rem 0;
+}
+
+.like_icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: grey;
+}
+
+footer {
+  text-align: left;
+  color: #fff;
+  background-color: #000;
+}
+footer a {
+  color: #fff;
+}
+
+.footer {
+  padding: 1.5rem 0 2.5rem 1.2rem;
+}
+.footer_title {
+  font-family: "Shrikhand";
+  padding-bottom: 0.7rem;
+}
+.footer_element {
+  display: flex;
+  padding: 0.3rem 0;
+}
+.footer_element i {
+  padding-right: 1rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -207,7 +277,8 @@ header {
   }
 }
 @media screen and (min-width: 1024px) {
-  .running, .restaurant_intro {
+  .running,
+.restaurant_intro {
     max-width: 1600px;
   }
 }
