@@ -134,6 +134,7 @@ table {
 }
 
 /***Minireset Ending here***/
+/***Page d'accueil***/
 body {
   scroll-behavior: smooth;
   width: 100%;
@@ -151,11 +152,27 @@ a {
   color: #000;
 }
 
+/***Header***/
+.header_container {
+  position: relative;
+  /***Pages html restaurants***/
+}
+.header_container span {
+  position: absolute;
+  left: 1rem;
+  top: 0.8rem;
+}
+
+/**Fin page html restaurants***/
+.header_logo {
+  justify-content: center;
+}
 .header_logo img {
   height: 1.5rem;
   padding: 0.5rem 0;
 }
 
+/***Main***/
 .explorer_location {
   background-color: lightgray;
   padding: 0.5rem;
@@ -180,19 +197,24 @@ a {
 .restaurant_intro_title {
   text-align: left;
   font-weight: 600;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-top: 2rem;
+  padding: 3rem 0 1rem 0;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1.3rem;
+}
+
+.running_main {
+  margin-left: 1rem;
 }
 
 .running_container {
+  width: 90%;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 1rem 0;
   margin: 0.7rem auto 0 auto;
   background-color: #eeeeee;
-  width: 90%;
   font-weight: 500;
 }
 .running_container i {
@@ -215,7 +237,7 @@ a {
 }
 
 .restaurant_intro_article {
-  margin-bottom: 1rem;
+  margin-bottom: 1.3rem;
 }
 .restaurant_intro_article img {
   object-fit: cover;
@@ -241,11 +263,12 @@ a {
 .like_icon {
   position: absolute;
   top: 1rem;
-  right: 1rem;
+  right: 1.4rem;
   font-size: 1.5rem;
   color: grey;
 }
 
+/***Footer HTML : Page d'accueil et pages restaurants***/
 footer {
   text-align: left;
   color: #fff;
@@ -260,7 +283,7 @@ footer a {
 }
 .footer_title {
   font-family: "Shrikhand";
-  padding-bottom: 0.7rem;
+  padding-bottom: 1rem;
 }
 .footer_element {
   display: flex;
@@ -268,6 +291,60 @@ footer a {
 }
 .footer_element i {
   padding-right: 1rem;
+}
+
+/***Pages Html Restaurants***/
+/***main***/
+.restaurant_img img {
+  object-fit: cover;
+  height: 65vw;
+  width: 100%;
+}
+
+.restaurant_menu {
+  background-color: #dddddd;
+  position: relative;
+  top: -3.5rem;
+  border-radius: 3rem 3rem 0 0;
+  text-align: left;
+  padding: 0 7vw;
+}
+
+.restaurant_menu_header h2 {
+  font-family: "Shrikhand";
+  font-size: 7vw;
+  padding: 2rem 0;
+}
+.restaurant_menu_header .like_icon {
+  top: 2rem;
+  right: 7vw;
+  font-size: 7vw;
+}
+
+.menu_dish_container {
+  margin: 1rem 0 2rem -0.5rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 5px grey;
+  padding: 0.8rem 0.8rem 0.8rem 0.7rem;
+  position: relative;
+}
+.menu_dish_container h2 {
+  font-weight: 600;
+  padding-bottom: 0.6rem;
+}
+.menu_dish_container h2, .menu_dish_container h3 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.menu_dish_container h3 {
+  padding-right: 4rem;
+}
+.menu_dish_container span {
+  position: absolute;
+  bottom: 0.8rem;
+  right: 2rem;
 }
 
 @media screen and (min-width: 600px) {
