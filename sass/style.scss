@@ -1,4 +1,6 @@
 @import "libs/reset.scss";
+@import "libs/color.scss";
+@import "libs/keyframes.scss";
 
 /***Minireset Ending here***/
 
@@ -30,6 +32,7 @@ a {
     position: absolute;
     left: 1rem;
     top: 0.8rem;
+    color: #000;
   }
 }
 /**Fin page html restaurants***/
@@ -46,13 +49,17 @@ a {
 
 .explorer {
   &_location {
-    background-color: rgb(211, 211, 211);
+    background-color: #eaeaea;
+    box-shadow: 0px -1px 4px #cecece;
     padding: 0.5rem;
     font-size: 0.8rem;
     font-weight: 500;
+    & i {
+      padding-right: 0.5rem;
+    }
   }
   &_description {
-    background-color: rgb(236, 236, 236);
+    background-color: $color-background;
     padding: 2rem;
     & h1 {
       font-size: 1.3rem;
@@ -86,7 +93,7 @@ a {
   align-items: center;
   padding: 1rem 0;
   margin: 0.7rem auto 0 auto;
-  background-color: rgb(238, 238, 238);
+  background-color: $color-background;
   font-weight: 500;
   & i {
     padding: 0 1.3rem;
@@ -94,7 +101,7 @@ a {
 }
 
 .restaurant_intro {
-  background-color: rgb(238, 238, 238);
+  background-color: $color-background;
   padding-bottom: 2rem;
 }
 
@@ -132,12 +139,35 @@ a {
     }
   }
 }
+
+/***Like icon***/
+
 .like_icon {
   position: absolute;
   top: 1rem;
   right: 1.4rem;
   font-size: 1.5rem;
-  color: grey;
+  & .far{
+    position: absolute;
+  }
+  & .fas {
+    visibility: hidden;
+  }
+  &:hover .far {
+    visibility: hidden;
+  }
+  &:hover .fas{
+    visibility: visible;
+  }
+  &:hover i {
+    background: $color-gradient;
+    background-clip: unset;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-animation: fill 1s;
+    -webkit-animation: fill 1s;
+    animation: fill linear 1s;
+  }
 }
 
 /***Footer HTML : Page d'accueil et pages restaurants***/
@@ -145,13 +175,15 @@ a {
 footer {
   text-align: left;
   color: #fff;
-  background-color: #000;
+
+  position: relative;
   & a {
     color: #fff;
   }
 }
 .footer {
   padding: 1.5rem 0 2.5rem 1.2rem;
+  background-color: #353535;
   &_title {
     font-family: "Shrikhand";
     padding-bottom: 1rem;
@@ -173,15 +205,17 @@ footer {
   object-fit: cover;
   height: 65vw;
   width: 100%;
+  position: absolute;
+  left: 0;
 }
 
 .restaurant_menu {
-  background-color: rgb(221, 221, 221);
-  position: relative;
-  top: -3.5rem;
+  background-color: $color-background;
   border-radius: 3rem 3rem 0 0;
   text-align: left;
-  padding: 0 7vw;
+  padding: 0 7vw 5vw 7vw;
+  position: relative;
+  top: 55vw;
 }
 
 .restaurant_menu_header {
@@ -201,19 +235,20 @@ footer {
   margin: 1rem 0 2rem -0.5rem;
   background-color: #fff;
   border-radius: 1rem;
-  box-shadow: 5px 5px 5px grey;
+  box-shadow: 5px 5px 5px $color-background;
   padding: 0.8rem 0.8rem 0.8rem 0.7rem;
   position: relative;
   & h2 {
     font-weight: 600;
     padding-bottom: 0.6rem;
   }
-  & h2, h3 {
+  & h2,
+  h3 {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
   }
-  & h3{
+  & h3 {
     padding-right: 4rem;
   }
   & span {
@@ -221,6 +256,10 @@ footer {
     bottom: 0.8rem;
     right: 2rem;
   }
+}
+
+.footer_restau {
+  margin-top: 55vw;
 }
 
 @media screen and (min-width: 600px) {

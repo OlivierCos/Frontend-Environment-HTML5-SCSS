@@ -133,6 +133,14 @@ table {
   border-spacing: 0;
 }
 
+@keyframes fill {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /***Minireset Ending here***/
 /***Page d'accueil***/
 body {
@@ -161,6 +169,7 @@ a {
   position: absolute;
   left: 1rem;
   top: 0.8rem;
+  color: #000;
 }
 
 /**Fin page html restaurants***/
@@ -174,13 +183,17 @@ a {
 
 /***Main***/
 .explorer_location {
-  background-color: lightgray;
+  background-color: #eaeaea;
+  box-shadow: 0px -1px 4px #cecece;
   padding: 0.5rem;
   font-size: 0.8rem;
   font-weight: 500;
 }
+.explorer_location i {
+  padding-right: 0.5rem;
+}
 .explorer_description {
-  background-color: #ececec;
+  background-color: #f6f6f6;
   padding: 2rem;
 }
 .explorer_description h1 {
@@ -214,7 +227,7 @@ a {
   align-items: center;
   padding: 1rem 0;
   margin: 0.7rem auto 0 auto;
-  background-color: #eeeeee;
+  background-color: #f6f6f6;
   font-weight: 500;
 }
 .running_container i {
@@ -222,7 +235,7 @@ a {
 }
 
 .restaurant_intro {
-  background-color: #eeeeee;
+  background-color: #f6f6f6;
   padding-bottom: 2rem;
 }
 
@@ -260,19 +273,40 @@ a {
   padding: 0.5rem 0 0.8rem 0;
 }
 
+/***Like icon***/
 .like_icon {
   position: absolute;
   top: 1rem;
   right: 1.4rem;
   font-size: 1.5rem;
-  color: grey;
+}
+.like_icon .far {
+  position: absolute;
+}
+.like_icon .fas {
+  visibility: hidden;
+}
+.like_icon:hover .far {
+  visibility: hidden;
+}
+.like_icon:hover .fas {
+  visibility: visible;
+}
+.like_icon:hover i {
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: unset;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-animation: fill 1s;
+  -webkit-animation: fill 1s;
+  animation: fill linear 1s;
 }
 
 /***Footer HTML : Page d'accueil et pages restaurants***/
 footer {
   text-align: left;
   color: #fff;
-  background-color: #000;
+  position: relative;
 }
 footer a {
   color: #fff;
@@ -280,6 +314,7 @@ footer a {
 
 .footer {
   padding: 1.5rem 0 2.5rem 1.2rem;
+  background-color: #353535;
 }
 .footer_title {
   font-family: "Shrikhand";
@@ -299,15 +334,17 @@ footer a {
   object-fit: cover;
   height: 65vw;
   width: 100%;
+  position: absolute;
+  left: 0;
 }
 
 .restaurant_menu {
-  background-color: #dddddd;
-  position: relative;
-  top: -3.5rem;
+  background-color: #f6f6f6;
   border-radius: 3rem 3rem 0 0;
   text-align: left;
-  padding: 0 7vw;
+  padding: 0 7vw 5vw 7vw;
+  position: relative;
+  top: 55vw;
 }
 
 .restaurant_menu_header h2 {
@@ -325,7 +362,7 @@ footer a {
   margin: 1rem 0 2rem -0.5rem;
   background-color: #fff;
   border-radius: 1rem;
-  box-shadow: 5px 5px 5px grey;
+  box-shadow: 5px 5px 5px #f6f6f6;
   padding: 0.8rem 0.8rem 0.8rem 0.7rem;
   position: relative;
 }
@@ -333,7 +370,8 @@ footer a {
   font-weight: 600;
   padding-bottom: 0.6rem;
 }
-.menu_dish_container h2, .menu_dish_container h3 {
+.menu_dish_container h2,
+.menu_dish_container h3 {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -345,6 +383,10 @@ footer a {
   position: absolute;
   bottom: 0.8rem;
   right: 2rem;
+}
+
+.footer_restau {
+  margin-top: 55vw;
 }
 
 @media screen and (min-width: 600px) {
