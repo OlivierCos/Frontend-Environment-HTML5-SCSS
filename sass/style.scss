@@ -1,6 +1,7 @@
 @import "libs/reset.scss";
 @import "libs/variables.scss";
 @import "libs/keyframes.scss";
+@import "libs/button.scss";
 
 /***Minireset Ending here***/
 
@@ -87,19 +88,42 @@ a {
   margin-left: 1rem;
 }
 .running_container {
+  position: relative;
   width: 90%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 1rem 0;
-  margin: 0.7rem auto 0 auto;
+  padding: 1.6rem 0 1.9rem 0;
+  margin: 0.7rem auto 1rem auto;
   background-color: $color-background;
+  border-radius: 1rem;
+  box-shadow: $box-shadow;
   font-weight: 500;
+  &_number{
+    color: #fff;
+    background: $color-primary;
+    left: -0.6rem;
+    position: absolute;
+    padding: 0.2rem 0.4rem;
+  border-radius: 1rem;
+  }
   & i {
-    padding: 0 1.3rem;
+    padding: 0 1.5rem 0 2.4rem;
+    color: #7e7e7e;
+  }
+  & .fa-store{
+    font-size: 0.8rem;
+  }
+  & .fa-mobile-alt{
+    font-size: 1.3rem;
+  }
+  &:hover{
+    background: #f5edff;
+  }
+  &:hover i{
+    color: $color-primary;
   }
 }
-
 .restaurant_intro {
   background-color: $color-background;
   padding-bottom: 2rem;
@@ -116,8 +140,20 @@ a {
 }
 
 .restaurant_intro_article {
+  position: relative;
   margin-bottom: 1.3rem;
-
+  box-shadow: $box-shadow;
+  border-radius: 1rem;
+  &_new{
+    position: absolute;
+    font-weight: 600;
+    color: #008766;
+    background: $color-tertiary;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    right: 0.6rem;
+    top: 0.7rem;
+  }
   & img {
     object-fit: cover;
     width: 100%;
@@ -273,6 +309,11 @@ footer {
     bottom: 0.8rem;
     right: 1.3rem;
   }
+}
+
+.order_btn{
+  margin: 2rem 0;
+  display: block;
 }
 
 .footer_restau {
