@@ -134,6 +134,18 @@ table {
 }
 
 /***Minireset Ending here***/
+/**Padding_Variables***/
+/***Page d'accueil***/
+/***Header***/
+/***Main***/
+/***Explorer***/
+/***Description***/
+/***running***/
+/***restaurant***/
+/***footer***/
+/***Restau pages***/
+/***Margin_Variables***/
+/**Ending_Padding&Margin_Variables***/
 @keyframes fill {
   0% {
     opacity: 0.1;
@@ -196,8 +208,8 @@ a {
   justify-content: center;
 }
 .header_logo img {
-  height: 1.5rem;
-  padding: 0.5rem 0;
+  height: 2rem;
+  padding: 1rem 0;
 }
 
 /***Main***/
@@ -378,7 +390,7 @@ footer a {
 }
 .footer_element {
   display: flex;
-  padding: 0.3rem 0;
+  padding: 0.3em 0;
 }
 .footer_element i {
   padding-right: 1rem;
@@ -408,7 +420,7 @@ footer a {
 .restaurant_menu_header h2 {
   font-family: "Shrikhand";
   font-size: 7vw;
-  padding: 2rem 0 0 0;
+  padding-top: 2rem;
 }
 .restaurant_menu_header .like_icon {
   top: 2rem;
@@ -433,30 +445,30 @@ footer a {
   border-radius: 1rem;
   box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.15);
   padding: 0.8rem 0.8rem 0.8rem 0.7rem;
-  position: relative;
 }
 .menu_dish_container h2 {
   font-weight: 500;
   padding-bottom: 0.6rem;
-  font-size: 1rem;
+  font-size: 16px;
 }
-.menu_dish_container h2,
-.menu_dish_container h3 {
+.menu_dish_container h2, .menu_dish_container .menu_dish_body .menu_dish_description {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.menu_dish_container h3 {
-  padding-right: 3rem;
+.menu_dish_container .menu_dish_body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu_dish_container .menu_dish_body .menu_dish_description {
   font-size: 0.8rem;
   font-weight: 300;
 }
-.menu_dish_container span {
-  position: absolute;
-  bottom: 0.8rem;
-  right: 1.3rem;
+.menu_dish_container .menu_dish_body .menu_dish_price {
   font-size: 0.8rem;
   font-weight: 500;
+  padding-left: 0.5rem;
 }
 
 .order_btn {

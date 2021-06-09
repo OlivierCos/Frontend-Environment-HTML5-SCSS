@@ -1,5 +1,7 @@
 @import "libs/reset.scss";
 /***Minireset Ending here***/
+@import "libs/weight&size.scss";
+@import "libs/padding&margin.scss";
 @import "libs/variables.scss";
 @import "libs/keyframes.scss";
 @import "libs/button.scss";
@@ -9,9 +11,9 @@
 body {
   scroll-behavior: smooth;
   width: 100%;
-  margin: 0 auto;
+  margin: $margin-body;
   font-family: "Roboto", "sans-serif";
-  font-size: 16px;
+  font-size: $font-size-normal;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -40,8 +42,8 @@ a {
 .header_logo {
   justify-content: center;
   & img {
-    height: 1.5rem;
-    padding: 0.5rem 0;
+    height: 2rem;
+    padding: $padding-header-logo;
   }
 }
 
@@ -50,25 +52,25 @@ a {
 .explorer {
   &_location {
     background-color: #eaeaea;
-    box-shadow: 0px -2px 4px #cecece;
-    padding: 0.7rem;
-    font-size: 0.8rem;
-    font-weight: 500;
+    box-shadow: $box-shadow-explorer;
+    padding: $padding-explorer-city;
+    font-size: $font-size-small;
+    font-weight: $font-weight-normal;
     & i {
-      padding-right: 0.5rem;
+      padding-right: $padding-explorer-i;
     }
   }
   &_description {
     background-color: $color-background;
-    padding: 2rem;
+    padding: $padding-description-block;
     & h1 {
-      font-size: 1.3rem;
-      font-weight: 600;
-      padding: 0 4rem 0.8rem 4rem;
+      font-size: $font-size-large;
+      font-weight: $font-weight-large;
+      padding: $padding-description-h1;
       line-height: 1.2rem;
     }
     & h2 {
-      padding-bottom: 1.5rem;
+      padding-bottom: $padding-description-h2;
     }
   }
 }
@@ -76,15 +78,15 @@ a {
 .running_title,
 .restaurant_intro_title {
   text-align: left;
-  font-weight: 600;
-  padding: 3rem 0 1rem 0;
+  font-weight: $font-weight-large;
+  padding: $padding-title;
   width: 90%;
-  margin: 0 auto;
-  font-size: 1.3rem;
+  margin: $margin-body;
+  font-size: $font-size-large;
 }
 
 .running_main {
-  margin-left: 1rem;
+  margin-left: $margin-running-main;
 }
 .running_container {
   position: relative;
@@ -92,29 +94,29 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 1.6rem 0 1.9rem 0;
-  margin: 0.7rem auto 1rem auto;
+  padding: $padding-running-container;
+  margin: $margin-running-container;
   background-color: $color-background;
   border-radius: 1rem;
   box-shadow: $box-shadow;
-  font-weight: 500;
+  font-weight: $font-weight-normal;
   &_number {
     color: #fff;
     background: $color-primary;
     left: -0.6rem;
     position: absolute;
-    padding: 0.2rem 0.4rem;
+    padding: $padding-running-container-number;
     border-radius: 1rem;
   }
   & i {
-    padding: 0 1.5rem 0 2.4rem;
+    padding: $padding-running-container-i;
     color: #7e7e7e;
   }
   & .fa-store {
-    font-size: 0.8rem;
+    font-size: $font-size-small;
   }
   & .fa-mobile-alt {
-    font-size: 1.3rem;
+    font-size: $font-size-large;
   }
   &:hover {
     background: #f5edff;
@@ -125,30 +127,30 @@ a {
 }
 .restaurant_intro {
   background-color: $color-background;
-  padding-bottom: 2rem;
+  padding-bottom: $padding-description-block;
 }
 
 .restaurant_intro_title {
-  margin-top: 2rem;
-  padding-bottom: 1.5rem;
+  margin-top: $margin-restau-intro-title;
+  padding-bottom: $padding-description-h2;
 }
 
 .restaurant_intro_cards {
   width: 90%;
-  margin: 0 auto;
+  margin: $margin-body;
 }
 
 .restaurant_intro_article {
   position: relative;
-  margin-bottom: 1.3rem;
+  margin-bottom: $margin-restau-intro-article;
   box-shadow: $box-shadow;
   border-radius: 1rem;
   &_new {
     position: absolute;
-    font-weight: 600;
+    font-weight: $font-weight-large;
     color: #008766;
     background: $color-tertiary;
-    padding: 0.5rem 1rem;
+    padding: $padding-intro-article-new;
     border-radius: 0.3rem;
     right: 0.6rem;
     top: 0.7rem;
@@ -163,14 +165,14 @@ a {
     border-radius: 0 0 1rem 1rem;
     background-color: #fff;
     text-align: left;
-    padding-left: 1rem;
+    padding-left: $padding-intro-article-body;
     position: relative;
     & h2 {
-      padding-top: 0.8rem;
-      font-weight: 600;
+      padding-top: $padding-intro-article-body-h2;
+      font-weight: $font-weight-large;
     }
     & h3 {
-      padding: 0.5rem 0 0.8rem 0;
+      padding: $padding-intro-article-body-h3;
     }
   }
 }
@@ -181,7 +183,7 @@ a {
   position: absolute;
   top: 1rem;
   right: 1.4rem;
-  font-size: 1.5rem;
+  font-size: $font-size-xlarge;
   & .far {
     position: absolute;
   }
@@ -217,20 +219,20 @@ footer {
   }
 }
 .footer {
-  padding: 1.5rem 0 2.5rem 1.2rem;
+  padding: $padding-footer;
   background-color: #353535;
   &_title {
     font-family: "Shrikhand";
-    padding-bottom: 1rem;
+    padding-bottom: $padding-intro-article-body;
   }
   &_element {
     display: flex;
-    padding: 0.3rem 0;
+    padding: $padding-footer-element;
     & i {
-      padding-right: 1rem;
+      padding-right: $padding-intro-article-body;
     }
     & .fa-hands-helping {
-      font-size: 0.7rem;
+      font-size: $font-size-xsmall;
     }
   }
 }
@@ -250,69 +252,69 @@ footer {
   background-color: $color-background;
   border-radius: 3rem 3rem 0 0;
   text-align: left;
-  padding: 0 7vw 5vw 7vw;
+  padding: $padding-restau-menu;
   position: relative;
-  margin-top: -3.5rem;
+  margin-top: $margin-restau-menu;
 }
 
 .restaurant_menu_header {
   & h2 {
     font-family: "Shrikhand";
-    font-size: 7vw;
-    padding: 2rem 0 0 0;
+    font-size: $font-size-extend-title;
+    padding-top: $padding-description-block;
   }
   & .like_icon {
     top: 2rem;
     right: 7vw;
-    font-size: 7vw;
+    font-size: $font-size-extend-title;
   }
 }
 
 .menu_dish_title {
-  margin: 1rem 0;
-  font-weight: 300;
+  margin: $margin-menu-dish-title;
+  font-weight: $font-weight-xsmall;
   line-height: 0.5rem;
-  padding-top: 1.5rem;
+  padding-top: $padding-description-h2;
   & p {
     color: $color-tertiary;
-    font-weight: 700;
+    font-weight: $font-weight-xlarge;
   }
 }
 
 .menu_dish_container {
-  margin: 0.5rem 0 1rem -0.5rem;
+  margin:$margin-dish-container;
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: $box-shadow;
-  padding: 0.8rem 0.8rem 0.8rem 0.7rem;
-  position: relative;
+  padding: $padding-dish-container;
   & h2 {
-    font-weight: 500;
-    padding-bottom: 0.6rem;
-    font-size: 1rem;
+    font-weight: $font-weight-normal;
+    padding-bottom: $padding-dish-container-h2;
+    font-size: $font-size-normal;
   }
-  & h2,
-  h3 {
+  & h2, .menu_dish_body .menu_dish_description {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
   }
-  & h3 {
-    padding-right: 3rem;
-    font-size: 0.8rem;
-    font-weight: 300;
+  & .menu_dish_body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
-  & span {
-    position: absolute;
-    bottom: 0.8rem;
-    right: 1.3rem;
-    font-size: 0.8rem;
-    font-weight: 500;
+  & .menu_dish_body .menu_dish_description {
+    font-size: $font-size-small;
+    font-weight: $font-weight-xsmall;
+  }
+  & .menu_dish_body .menu_dish_price {
+    font-size: $font-size-small;
+    font-weight: $font-weight-normal;
+    padding-left: $padding-explorer-i;
   }
 }
 
 .order_btn {
-  margin: 2rem auto;
+  margin: $margin-order-btn;
   display: block;
 }
 
@@ -326,6 +328,6 @@ footer {
 @media screen and (min-width: 1024px) {
   .running, .restaurant_intro_title, .restaurant_intro_cards {
     max-width: 1600px;
-    margin: 0 auto;
+    margin: $margin-body;
   }
 }

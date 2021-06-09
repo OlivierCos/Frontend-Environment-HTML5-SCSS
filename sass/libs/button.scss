@@ -1,11 +1,11 @@
 .btn { 
     width: 14.2rem;
     height: 3.1rem;
-    font-size: 0.9rem;
+    font-size: $font-size-lsmall;
     border-radius: 3rem;
     border-style: none;
     color: #fff;
-    font-weight: 600;
+    font-weight: $font-weight-large;
     cursor: pointer;
     background: $color-gradient2;
     box-shadow: $box-shadow;
