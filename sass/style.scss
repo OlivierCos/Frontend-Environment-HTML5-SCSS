@@ -1,8 +1,8 @@
 @import "libs/reset.scss";
-@import "libs/color.scss";
-@import "libs/keyframes.scss";
-
 /***Minireset Ending here***/
+@import "libs/variables.scss";
+@import "libs/keyframes.scss";
+@import "libs/button.scss";
 
 /***Page d'accueil***/
 
@@ -50,8 +50,8 @@ a {
 .explorer {
   &_location {
     background-color: #eaeaea;
-    box-shadow: 0px -1px 4px #cecece;
-    padding: 0.5rem;
+    box-shadow: 0px -2px 4px #cecece;
+    padding: 0.7rem;
     font-size: 0.8rem;
     font-weight: 500;
     & i {
@@ -87,19 +87,42 @@ a {
   margin-left: 1rem;
 }
 .running_container {
+  position: relative;
   width: 90%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 1rem 0;
-  margin: 0.7rem auto 0 auto;
+  padding: 1.6rem 0 1.9rem 0;
+  margin: 0.7rem auto 1rem auto;
   background-color: $color-background;
+  border-radius: 1rem;
+  box-shadow: $box-shadow;
   font-weight: 500;
+  &_number {
+    color: #fff;
+    background: $color-primary;
+    left: -0.6rem;
+    position: absolute;
+    padding: 0.2rem 0.4rem;
+    border-radius: 1rem;
+  }
   & i {
-    padding: 0 1.3rem;
+    padding: 0 1.5rem 0 2.4rem;
+    color: #7e7e7e;
+  }
+  & .fa-store {
+    font-size: 0.8rem;
+  }
+  & .fa-mobile-alt {
+    font-size: 1.3rem;
+  }
+  &:hover {
+    background: #f5edff;
+  }
+  &:hover i {
+    color: $color-primary;
   }
 }
-
 .restaurant_intro {
   background-color: $color-background;
   padding-bottom: 2rem;
@@ -116,8 +139,20 @@ a {
 }
 
 .restaurant_intro_article {
+  position: relative;
   margin-bottom: 1.3rem;
-
+  box-shadow: $box-shadow;
+  border-radius: 1rem;
+  &_new {
+    position: absolute;
+    font-weight: 600;
+    color: #008766;
+    background: $color-tertiary;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    right: 0.6rem;
+    top: 0.7rem;
+  }
   & img {
     object-fit: cover;
     width: 100%;
@@ -147,7 +182,7 @@ a {
   top: 1rem;
   right: 1.4rem;
   font-size: 1.5rem;
-  & .far{
+  & .far {
     position: absolute;
   }
   & .fas {
@@ -156,7 +191,7 @@ a {
   &:hover .far {
     visibility: hidden;
   }
-  &:hover .fas{
+  &:hover .fas {
     visibility: visible;
   }
   &:hover i {
@@ -194,6 +229,9 @@ footer {
     & i {
       padding-right: 1rem;
     }
+    & .fa-hands-helping {
+      font-size: 0.7rem;
+    }
   }
 }
 
@@ -205,7 +243,6 @@ footer {
   object-fit: cover;
   height: 65vw;
   width: 100%;
-  position: absolute;
   left: 0;
 }
 
@@ -215,14 +252,14 @@ footer {
   text-align: left;
   padding: 0 7vw 5vw 7vw;
   position: relative;
-  top: 55vw;
+  margin-top: -3.5rem;
 }
 
 .restaurant_menu_header {
   & h2 {
     font-family: "Shrikhand";
     font-size: 7vw;
-    padding: 2rem 0;
+    padding: 2rem 0 0 0;
   }
   & .like_icon {
     top: 2rem;
@@ -231,16 +268,28 @@ footer {
   }
 }
 
+.menu_dish_title {
+  margin: 1rem 0;
+  font-weight: 300;
+  line-height: 0.5rem;
+  padding-top: 1.5rem;
+  & p {
+    color: $color-tertiary;
+    font-weight: 700;
+  }
+}
+
 .menu_dish_container {
-  margin: 1rem 0 2rem -0.5rem;
+  margin: 0.5rem 0 1rem -0.5rem;
   background-color: #fff;
   border-radius: 1rem;
-  box-shadow: 5px 5px 5px $color-background;
+  box-shadow: $box-shadow;
   padding: 0.8rem 0.8rem 0.8rem 0.7rem;
   position: relative;
   & h2 {
-    font-weight: 600;
+    font-weight: 500;
     padding-bottom: 0.6rem;
+    font-size: 1rem;
   }
   & h2,
   h3 {
@@ -249,17 +298,22 @@ footer {
     overflow: hidden;
   }
   & h3 {
-    padding-right: 4rem;
+    padding-right: 3rem;
+    font-size: 0.8rem;
+    font-weight: 300;
   }
   & span {
     position: absolute;
     bottom: 0.8rem;
-    right: 2rem;
+    right: 1.3rem;
+    font-size: 0.8rem;
+    font-weight: 500;
   }
 }
 
-.footer_restau {
-  margin-top: 55vw;
+.order_btn {
+  margin: 2rem auto;
+  display: block;
 }
 
 @media screen and (min-width: 600px) {
@@ -270,8 +324,8 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  .running,
-  .restaurant_intro {
+  .running, .restaurant_intro_title, .restaurant_intro_cards {
     max-width: 1600px;
+    margin: 0 auto;
   }
 }

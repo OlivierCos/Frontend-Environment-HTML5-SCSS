@@ -1,0 +1,18 @@
+.btn { 
+    width: 14.2rem;
+    height: 3.1rem;
+    font-size: 0.9rem;
+    border-radius: 3rem;
+    border-style: none;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    background: $color-gradient2;
+    box-shadow: $box-shadow;
+    transition: 0.5s;
+    &:hover { 
+        transform: scale(1.08);
+        opacity: 0.7;
+        box-shadow: $box-shadow-darker;
+    }
+}

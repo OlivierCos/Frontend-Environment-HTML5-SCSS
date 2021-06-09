@@ -1,0 +1,32 @@
+{
+  "name": "oliviercostel_3_02062021",
+  "version": "1.0.0",
+  "description": "ok",
+  "main": "index.html",
+  "dependencies": {
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.0",
+    "postcss-cli": "^8.3.1",
+    "sass": "^1.34.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass sass/style.scss sass/style.css",
+    "sass:watch": "sass sass/style.scss sass/style.css --watch",
+    "autoprefixer": "npx postcss sass/style.css --use autoprefixer -d ./",
+    "autoprefixer:watch": "npx postcss sass/style.css --use autoprefixer -d ./ --watch",
+    "dev": "npm run sass:watch & npm run autoprefixer:watch &",
+    "build": "npm run sass && npm run autoprefixer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlivierCos/OlivierCostel_3_02062021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OlivierCos/OlivierCostel_3_02062021/issues"
+  },
+  "homepage": "https://github.com/OlivierCos/OlivierCostel_3_02062021#readme"
+}
