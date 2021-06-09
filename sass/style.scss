@@ -98,28 +98,28 @@ a {
   border-radius: 1rem;
   box-shadow: $box-shadow;
   font-weight: 500;
-  &_number{
+  &_number {
     color: #fff;
     background: $color-primary;
     left: -0.6rem;
     position: absolute;
     padding: 0.2rem 0.4rem;
-  border-radius: 1rem;
+    border-radius: 1rem;
   }
   & i {
     padding: 0 1.5rem 0 2.4rem;
     color: #7e7e7e;
   }
-  & .fa-store{
+  & .fa-store {
     font-size: 0.8rem;
   }
-  & .fa-mobile-alt{
+  & .fa-mobile-alt {
     font-size: 1.3rem;
   }
-  &:hover{
+  &:hover {
     background: #f5edff;
   }
-  &:hover i{
+  &:hover i {
     color: $color-primary;
   }
 }
@@ -143,7 +143,7 @@ a {
   margin-bottom: 1.3rem;
   box-shadow: $box-shadow;
   border-radius: 1rem;
-  &_new{
+  &_new {
     position: absolute;
     font-weight: 600;
     color: #008766;
@@ -243,7 +243,6 @@ footer {
   object-fit: cover;
   height: 65vw;
   width: 100%;
-  position: absolute;
   left: 0;
 }
 
@@ -253,7 +252,7 @@ footer {
   text-align: left;
   padding: 0 7vw 5vw 7vw;
   position: relative;
-  top: 55vw;
+  margin-top: -3.5rem;
 }
 
 .restaurant_menu_header {
@@ -274,7 +273,7 @@ footer {
   font-weight: 300;
   line-height: 0.5rem;
   padding-top: 1.5rem;
-  & p{
+  & p {
     color: $color-tertiary;
     font-weight: 700;
   }
@@ -307,16 +306,14 @@ footer {
     position: absolute;
     bottom: 0.8rem;
     right: 1.3rem;
+    font-size: 0.8rem;
+    font-weight: 500;
   }
 }
 
-.order_btn{
+.order_btn {
   margin: 2rem auto;
   display: block;
-}
-
-.footer_restau {
-  margin-top: 55vw;
 }
 
 @media screen and (min-width: 600px) {
@@ -327,8 +324,8 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  .running,
-  .restaurant_intro {
+  .running, .restaurant_intro_title, .restaurant_intro_cards {
     max-width: 1600px;
+    margin: 0 auto;
   }
 }
