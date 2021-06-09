@@ -6,18 +6,21 @@
 ## Le développement
 ### Dart-sass
 * Réalisé à l'aide de SASS avec la lib dart-sass, sans JavaScript. 
-* Télécharger le dossier dart-sass selon votre système d'exploitation sur github.
-* Exécuter : https://github.com/sass/dart-sass/releases/tag/1.34.0
+* Télécharger le dossier dart-sass selon votre système d'exploitation sur github.https://github.com/sass/dart-sass/releases/tag/1.34.0
+* Exécuter!
 * Pour la création d'un fichier style.scss et celle d'un fichier css compilé automatiquement : 
+```
 $ ./dart-sass/sass sass/style.scss style.css --watch
+```
 
 ### Node.js
 * Ajout de Node.js pour lancer autoprefixer (afin de créer automatiquement les webkits) et preprocesseur Mediaqueries (afin de regrouper automatiquement les Mediaqueries)
 * Télécharger node.js : https://nodejs.org/en/ (fichier LTS)
 * Afin de compiler automatiquement autoprefixer et preprocesseur : 
+```
 $ npm run autoprefixer:watch
 $ npm run sass:watch
-
+```
 ***
 
 ## Lien github pages : 
