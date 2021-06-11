@@ -146,11 +146,66 @@ table {
 /***Restau pages***/
 /***Margin_Variables***/
 /**Ending_Padding&Margin_Variables***/
-@keyframes fill {
+/***Like icon***/
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.like_icon {
+  font-size: 1.5rem;
+  transition: transform;
+}
+.like_icon .far {
+  position: absolute;
+}
+.like_icon .fas {
+  visibility: hidden;
+}
+.like_icon:hover .far {
+  visibility: hidden;
+}
+.like_icon:hover .fas {
+  visibility: visible;
+  cursor: pointer;
+}
+.like_icon:hover i {
+  background: linear-gradient(#9356DC, #FF79DA);
+  animation: fillup 1s linear;
+  -webkit-text-fill-color: transparent;
+  background-clip: unset;
+  -webkit-background-clip: text;
+}
+.like_icon:focus .far {
+  visibility: hidden;
+}
+.like_icon:focus .fas {
+  visibility: visible;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-text-fill-color: transparent;
+  background-clip: unset;
+  -webkit-background-clip: text;
+}
+
+/***Like icon on index.html***/
+@keyframes fillup {
   0% {
-    opacity: 0.1;
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  40% {
+    transform: scaleY(0.25);
+  }
+  60% {
+    transform: scaleY(0.75);
+    opacity: 0.35;
+  }
+  80% {
+    opacity: 0.6;
   }
   100% {
+    transform: scaleY(1);
     opacity: 1;
   }
 }
@@ -199,8 +254,9 @@ a {
 .header_container span {
   position: absolute;
   left: 1rem;
-  top: 0.8rem;
+  top: 1.6rem;
   color: #000;
+  font-size: 1.3rem;
 }
 
 /**Fin page html restaurants***/
@@ -331,7 +387,9 @@ a {
   background-color: #fff;
   text-align: left;
   padding-left: 1rem;
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .restaurant_intro_article_body h2 {
   padding-top: 0.8rem;
@@ -340,40 +398,15 @@ a {
 .restaurant_intro_article_body h3 {
   padding: 0.5rem 0 0.8rem 0;
 }
-
-/***Like icon***/
-.like_icon {
-  position: absolute;
-  top: 1rem;
-  right: 1.4rem;
-  font-size: 1.5rem;
-}
-.like_icon .far {
-  position: absolute;
-}
-.like_icon .fas {
-  visibility: hidden;
-}
-.like_icon:hover .far {
-  visibility: hidden;
-}
-.like_icon:hover .fas {
-  visibility: visible;
-}
-.like_icon:hover i {
-  background: linear-gradient(#9356DC, #FF79DA);
-  background-clip: unset;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-animation: fill 1s;
-  -webkit-animation: fill 1s;
-  animation: fill linear 1s;
+.restaurant_intro_article_body button {
+  padding-right: 1.5rem;
 }
 
 /***Footer HTML : Page d'accueil et pages restaurants***/
 footer {
   text-align: left;
   color: #fff;
+  background-color: #353535;
   position: relative;
 }
 footer a {
@@ -382,7 +415,6 @@ footer a {
 
 .footer {
   padding: 1.5rem 0 2.5rem 1.2rem;
-  background-color: #353535;
 }
 .footer_title {
   font-family: "Shrikhand";
@@ -417,10 +449,15 @@ footer a {
   margin-top: -3.5rem;
 }
 
+.restaurant_menu_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
 .restaurant_menu_header h2 {
   font-family: "Shrikhand";
   font-size: 7vw;
-  padding-top: 2rem;
 }
 .restaurant_menu_header .like_icon {
   top: 2rem;
@@ -445,13 +482,15 @@ footer a {
   border-radius: 1rem;
   box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.15);
   padding: 0.8rem 0.8rem 0.8rem 0.7rem;
+  cursor: pointer;
 }
 .menu_dish_container h2 {
   font-weight: 500;
   padding-bottom: 0.6rem;
   font-size: 16px;
 }
-.menu_dish_container h2, .menu_dish_container .menu_dish_body .menu_dish_description {
+.menu_dish_container h2,
+.menu_dish_container .menu_dish_body .menu_dish_description {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -481,11 +520,72 @@ footer a {
 header {
     width: 100%;
   }
+
+  .restaurant_img img,
+.restaurant_menu_header,
+.menu_dish_card {
+    height: auto;
+    width: 80%;
+  }
+
+  .restaurant_menu {
+    padding: 0 2rem 1rem 2rem;
+    border-radius: unset;
+  }
+
+  .restaurant_menu_header,
+.menu_dish_card {
+    margin: 0 auto;
+  }
+
+  .restaurant_menu_header h2,
+.restaurant_menu_header .like_icon {
+    font-size: 2.4rem;
+  }
 }
 @media screen and (min-width: 1024px) {
-  .running, .restaurant_intro_title, .restaurant_intro_cards {
+  .running,
+.restaurant_intro_title,
+.restaurant_intro_cards,
+.restaurant_img,
+.footer {
     max-width: 1600px;
     margin: 0 auto;
+  }
+
+  .restaurant_menu_header,
+.menu_dish_card,
+.restaurant_img,
+.footer {
+    max-width: 1000px;
+  }
+
+  .restaurant_menu_header h2,
+.restaurant_menu_header .like_icon {
+    font-size: 3rem;
+  }
+
+  .menu_dish_card {
+    display: inline-block;
+    margin: 2rem;
+    width: 30%;
+  }
+
+  .restaurant_menu:not(:first-child, :last-child) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .footer_title {
+    text-align: center;
+    padding: 0.5rem 0 1.5rem 0;
+  }
+
+  .footer_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 

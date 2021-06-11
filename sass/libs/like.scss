@@ -1,0 +1,42 @@
+/***Like icon***/
+button {
+  border: none;
+  background-color: transparent;
+}
+.like_icon {
+  font-size: $font-size-xlarge;
+  transition: transform;
+  & .far {
+    position: absolute;
+  }
+  & .fas {
+    visibility: hidden;
+  }
+  &:hover .far {
+    visibility: hidden;
+  }
+  &:hover .fas {
+    visibility: visible;
+    cursor: pointer;
+  }
+  &:hover i {
+    background: $color-gradient;
+    animation: fillup 1s linear;
+    -webkit-text-fill-color: transparent;
+    background-clip: unset;
+    -webkit-background-clip: text;
+  }
+  &:focus .far {
+    visibility: hidden;
+  }
+  &:focus .fas {
+    visibility: visible;
+    background: $color-gradient;
+    -webkit-text-fill-color: transparent;
+    background-clip: unset;
+    -webkit-background-clip: text;
+  }
+}
+
+/***Like icon on index.html***/
+
