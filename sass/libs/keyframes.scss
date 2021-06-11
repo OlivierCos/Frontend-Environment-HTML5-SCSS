@@ -1,8 +1,21 @@
-@keyframes fill {
+@keyframes fillup {
   0% {
-    opacity: 0.1;
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
   }
+  40%{
+    transform: scaleY(0.25);
+  }
+  60% {
+    transform: scaleY(0.75);
+    opacity: 0.35;
+  }
+80%{
+  opacity: 0.6;
+}
   100% {
+    transform: scaleY(1);
     opacity: 1;
   }
 }
