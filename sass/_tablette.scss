@@ -23,9 +23,10 @@
   .restaurant_menu_header,
   .menu_dishes {
     width: 80%;
+    max-width: 80rem;
   }
     .restaurant_img img{
-    max-height: 55rem;
+    max-height: 45rem;
   }
   .restaurant_menu {
     padding: 0 2rem 1rem 2rem;

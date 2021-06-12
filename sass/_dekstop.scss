@@ -48,9 +48,6 @@
       font-size: 3rem;
     }
   }
-  .menu_dish_card{
-    width: 30%;
-  }
   .footer {
     max-width: 1350px;
     margin: $margin-body;
@@ -67,9 +64,18 @@
   }
 }
 
+@media screen and (min-width:1200px) {
+.menu_dishes{
+  width: 75%;
+}
+}
+
 @media screen and (min-width: 1440px) {
+  .menu_dishes{
+    width: 85%;
+  }
   .menu_dish_card{
-  width: 28%;
+    width: 28%;
   }
   .restaurant_intro_article {
     width: 34rem;

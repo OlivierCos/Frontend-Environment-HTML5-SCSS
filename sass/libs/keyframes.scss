@@ -54,3 +54,46 @@
     transform: translateY(0);
   }
 }
+
+@keyframes loading{
+
+    0% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0;
+        visibility: hidden;
+        display: none; 
+    }
+}
+
+@keyframes letter {
+  0%,
+  100% {
+    transform: scale(0);
+    color: $color-primary;
+  }
+
+50% {
+    transform: scale(0);
+    color: $color-secondary;
+  }
+
+25% {
+    transform: scale(1);
+    color: $color-primary;
+  }
+
+ 75% {
+    transform: scale(1);
+    color: $color-secondary;
+  }
+
+  100%{
+    visibility: hidden;
+    display: none;
+  }
+}
