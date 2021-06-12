@@ -5,6 +5,7 @@
 @import "libs/width&border-radius.scss";
 @import "libs/variables.scss";
 @import "libs/like.scss";
+@import "libs/animations.scss";
 @import "libs/keyframes.scss";
 @import "libs/button.scss";
 
@@ -138,6 +139,7 @@ a {
   padding-bottom: $padding-description-h2;
 }
 
+
 .restaurant_intro_cards {
   width: $width90;
   margin: $margin-body;
@@ -178,9 +180,11 @@ a {
     }
     & h3 {
       padding: $padding-intro-article-body-h3;
+      font-size: $font-size-lsmall;
     }
     & button {
       padding-right: 1.5rem;
+      font-size: 1.3rem;
     }
   }
 }
@@ -229,7 +233,7 @@ footer {
 .restaurant_menu {
   background-color: $color-background;
   border-radius: $border-radius-top-large;
-  text-align: left;
+  text-align: center;
   padding: $padding-restau-menu;
   position: relative;
   margin-top: $margin-restau-menu;
@@ -240,15 +244,14 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   padding-top: $padding-description-block;
+  position: relative;
   & h2 {
     font-family: "Shrikhand";
     font-size: $font-size-extend-title;
   }
-  & .like_icon {
-    top: 2rem;
-    right: 7vw;
-    font-size: $font-size-extend-title;
-  }
+}
+.menu_dishes{
+  margin: 0 auto;
 }
 
 .menu_dish_title {
@@ -256,6 +259,7 @@ footer {
   font-weight: $font-weight-xsmall;
   line-height: 0.5rem;
   padding-top: $padding-description-h2;
+  text-align: left;
   & p {
     color: $color-tertiary;
     font-weight: $font-weight-xlarge;
@@ -269,13 +273,14 @@ footer {
   box-shadow: $box-shadow;
   padding: $padding-dish-container;
   cursor: pointer;
+  position: relative;
   & h2 {
     font-weight: $font-weight-normal;
     padding-bottom: $padding-dish-container-h2;
     font-size: $font-size-normal;
+    text-align: left;
   }
-  & h2,
-  .menu_dish_body .menu_dish_description {
+  & h2, .menu_dish_description {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -285,12 +290,11 @@ footer {
     flex-direction: row;
     justify-content: space-between;
   }
-  & .menu_dish_body .menu_dish_description {
-    font-size: $font-size-small;
+  & .menu_dish_body {
+    font-size: $font-size-normal;
     font-weight: $font-weight-xsmall;
   }
   & .menu_dish_body .menu_dish_price {
-    font-size: $font-size-small;
     font-weight: $font-weight-normal;
     padding-left: $padding-explorer-i;
   }
@@ -301,72 +305,5 @@ footer {
   display: block;
 }
 
-@media screen and (min-width: 600px) {
-  main,
-  header {
-    width: $width100;
-  }
-  .restaurant_img img,
-  .restaurant_menu_header,
-  .menu_dish_card {
-    height: auto;
-    width: 80%;
-  }
-  .restaurant_menu {
-    padding: 0 2rem 1rem 2rem;
-    border-radius: unset;
-  }
-  .restaurant_menu_header,
-  .menu_dish_card {
-    margin: 0 auto;
-  }
-  .restaurant_menu_header {
-    & h2,
-    .like_icon {
-      font-size: 2.4rem;
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .running,
-  .restaurant_intro_title,
-  .restaurant_intro_cards,
-  .restaurant_img,
-  .footer {
-    max-width: 1600px;
-    margin: $margin-body;
-  }
-  .restaurant_menu_header,
-  .menu_dish_card,
-  .restaurant_img,
-  .footer {
-    max-width: 1000px;
-  }
-  .restaurant_menu_header {
-    & h2,
-    .like_icon {
-      font-size: 3rem;
-    }
-  }
-  .menu_dish_card {
-    display: inline-block;
-    margin: 2rem;
-    width: 30%;
-  }
-  .restaurant_menu:not(:first-child, :last-child) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .footer_title {
-    text-align: center;
-    padding: 0.5rem 0 1.5rem 0;
-  }
-  .footer_container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
+@import "tablette";
+@import "dekstop";

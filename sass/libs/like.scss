@@ -3,8 +3,12 @@ button {
   border: none;
   background-color: transparent;
 }
+.restaurant_menu_header{
+  & .like_icon {
+    font-size: 6vw;
+}
+}
 .like_icon {
-  font-size: $font-size-xlarge;
   transition: transform;
   & .far {
     position: absolute;
