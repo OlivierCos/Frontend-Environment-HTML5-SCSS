@@ -286,7 +286,7 @@ button {
 
 .letter {
   font-family: "Shrikhand";
-  font-size: 1rem;
+  font-size: 2rem;
   margin: 0.4rem;
   -webkit-animation: letter 2.2s linear both;
           animation: letter 2.2s linear both;
