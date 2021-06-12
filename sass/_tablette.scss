@@ -25,7 +25,7 @@
     width: 80%;
     max-width: 80rem;
   }
-    .restaurant_img img{
+  .restaurant_img img {
     max-height: 45rem;
   }
   .restaurant_menu {
@@ -50,6 +50,10 @@
 }
 
 @media screen and (min-width: 800px) {
+  .letter {
+    font-family: "Shrikhand";
+    font-size: 3rem;
+  }
   .menu_dishes {
     width: 90%;
   }
@@ -60,13 +64,13 @@
     width: 40%;
     vertical-align: top;
   }
-.running{
-  width: 50rem;
-  margin: 0 auto;
-}
-.running_title{
-  margin: 0 auto;
-}
+  .running {
+    width: 50rem;
+    margin: 0 auto;
+  }
+  .running_title {
+    margin: 0 auto;
+  }
   .restaurant_intro_title {
     width: 45rem;
     padding-bottom: 0;
