@@ -1,0 +1,64 @@
+//**Animation chooser**//
+
+.menu_dish_choosen {
+  position: absolute;
+  width: 4rem;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  border-radius: 0 1rem 1rem 0;
+  background: $color-tertiary;
+  animation: choosen 0.5s;
+  transform-origin: right;
+  display: none;
+}
+.menu_dish_container:hover .menu_dish_choosen {
+  display: unset;
+}
+.menu_dish_container:hover .menu_dish_price,
+.menu_dish_container:hover h2 {
+  transition: 0.5s;
+  margin-right: 4rem;
+}
+
+//**Animation done**//
+
+.menu_dish_choosen i {
+  font-size: 1.7rem;
+  position: relative;
+  animation: selection 0.5s linear;
+  top: 1.3rem;
+  color: $color-fourth;
+}
+//**Animation apparition**//
+.menu_dish_container,
+.menu_dish_card {
+  animation: apparition 1s both;
+}
+.menu_dish_card {
+  &:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+}
+
+.menu_dish_container {
+  &:nth-child(1) {
+    animation-delay: 0.13s;
+  }
+  &:nth-child(2) {
+    animation-delay: 0.26s;
+  }
+  &:nth-child(3) {
+    animation-delay: 0.39s;
+  }
+  &:nth-child(4) {
+    animation-delay: 0.52s;
+  }
+}
+.menu_dish_container {
+  @for $i from 1 through 4 {
+    &--#{$i} {
+      animation-delay: 0.13s * $i;
+    }
+  }
+}

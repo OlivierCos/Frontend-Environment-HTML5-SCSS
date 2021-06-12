@@ -152,8 +152,11 @@ button {
   background-color: transparent;
 }
 
+.restaurant_menu_header .like_icon {
+  font-size: 6vw;
+}
+
 .like_icon {
-  font-size: 1.5rem;
   transition: transform;
 }
 .like_icon .far {
@@ -188,6 +191,72 @@ button {
 }
 
 /***Like icon on index.html***/
+.menu_dish_choosen {
+  position: absolute;
+  width: 4rem;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  border-radius: 0 1rem 1rem 0;
+  background: #99E2D0;
+  animation: choosen 0.5s;
+  transform-origin: right;
+  display: none;
+}
+
+.menu_dish_container:hover .menu_dish_choosen {
+  display: unset;
+}
+
+.menu_dish_container:hover .menu_dish_price,
+.menu_dish_container:hover h2 {
+  transition: 0.5s;
+  margin-right: 4rem;
+}
+
+.menu_dish_choosen i {
+  font-size: 1.7rem;
+  position: relative;
+  animation: selection 0.5s linear;
+  top: 1.3rem;
+  color: #fff;
+}
+
+.menu_dish_container,
+.menu_dish_card {
+  animation: apparition 1s both;
+}
+
+.menu_dish_card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.menu_dish_container:nth-child(1) {
+  animation-delay: 0.13s;
+}
+.menu_dish_container:nth-child(2) {
+  animation-delay: 0.26s;
+}
+.menu_dish_container:nth-child(3) {
+  animation-delay: 0.39s;
+}
+.menu_dish_container:nth-child(4) {
+  animation-delay: 0.52s;
+}
+
+.menu_dish_container--1 {
+  animation-delay: 0.13s;
+}
+.menu_dish_container--2 {
+  animation-delay: 0.26s;
+}
+.menu_dish_container--3 {
+  animation-delay: 0.39s;
+}
+.menu_dish_container--4 {
+  animation-delay: 0.52s;
+}
+
 @keyframes fillup {
   0% {
     transform-origin: top;
@@ -209,10 +278,42 @@ button {
     opacity: 1;
   }
 }
+@keyframes choosen {
+  100% {
+    transform: scaleX(1);
+  }
+  0% {
+    transform: scaleX(0);
+  }
+}
+@keyframes selection {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(4rem);
+  }
+  25% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
 .btn {
-  width: 14.2rem;
+  width: 11.7rem;
   height: 3.1rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   border-radius: 3rem;
   border-style: none;
   color: #fff;
@@ -397,9 +498,11 @@ a {
 }
 .restaurant_intro_article_body h3 {
   padding: 0.5rem 0 0.8rem 0;
+  font-size: 0.9rem;
 }
 .restaurant_intro_article_body button {
   padding-right: 1.5rem;
+  font-size: 1.3rem;
 }
 
 /***Footer HTML : Page d'accueil et pages restaurants***/
@@ -443,7 +546,7 @@ footer a {
 .restaurant_menu {
   background-color: #f6f6f6;
   border-radius: 3rem 3rem 0 0;
-  text-align: left;
+  text-align: center;
   padding: 0 7vw 5vw 7vw;
   position: relative;
   margin-top: -3.5rem;
@@ -454,15 +557,15 @@ footer a {
   flex-direction: row;
   justify-content: space-between;
   padding-top: 2rem;
+  position: relative;
 }
 .restaurant_menu_header h2 {
   font-family: "Shrikhand";
   font-size: 7vw;
 }
-.restaurant_menu_header .like_icon {
-  top: 2rem;
-  right: 7vw;
-  font-size: 7vw;
+
+.menu_dishes {
+  margin: 0 auto;
 }
 
 .menu_dish_title {
@@ -470,6 +573,7 @@ footer a {
   font-weight: 300;
   line-height: 0.5rem;
   padding-top: 1.5rem;
+  text-align: left;
 }
 .menu_dish_title p {
   color: #99E2D0;
@@ -483,14 +587,15 @@ footer a {
   box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.15);
   padding: 0.8rem 0.8rem 0.8rem 0.7rem;
   cursor: pointer;
+  position: relative;
 }
 .menu_dish_container h2 {
   font-weight: 500;
   padding-bottom: 0.6rem;
   font-size: 16px;
+  text-align: left;
 }
-.menu_dish_container h2,
-.menu_dish_container .menu_dish_body .menu_dish_description {
+.menu_dish_container h2, .menu_dish_container .menu_dish_description {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -500,12 +605,11 @@ footer a {
   flex-direction: row;
   justify-content: space-between;
 }
-.menu_dish_container .menu_dish_body .menu_dish_description {
-  font-size: 0.8rem;
+.menu_dish_container .menu_dish_body {
+  font-size: 16px;
   font-weight: 300;
 }
 .menu_dish_container .menu_dish_body .menu_dish_price {
-  font-size: 0.8rem;
   font-weight: 500;
   padding-left: 0.5rem;
 }
@@ -521,11 +625,28 @@ header {
     width: 100%;
   }
 
+  .running_main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .running_container {
+    width: 45%;
+  }
+
+  .restaurant_intro_article {
+    margin-bottom: 4rem;
+  }
+
   .restaurant_img img,
 .restaurant_menu_header,
-.menu_dish_card {
-    height: auto;
+.menu_dishes {
     width: 80%;
+  }
+
+  .restaurant_img img {
+    max-height: 55rem;
   }
 
   .restaurant_menu {
@@ -538,43 +659,121 @@ header {
     margin: 0 auto;
   }
 
+  .restaurant_menu_header {
+    justify-content: space-evenly;
+  }
   .restaurant_menu_header h2,
 .restaurant_menu_header .like_icon {
     font-size: 2.4rem;
+  }
+
+  .btn {
+    width: 14.2rem;
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .menu_dishes {
+    width: 90%;
+  }
+
+  .menu_dish_card {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0 2rem;
+    width: 40%;
+    vertical-align: top;
+  }
+
+  .running {
+    width: 50rem;
+    margin: 0 auto;
+  }
+
+  .running_title {
+    margin: 0 auto;
+  }
+
+  .restaurant_intro_title {
+    width: 45rem;
+    padding-bottom: 0;
+  }
+
+  .restaurant_intro_article {
+    margin: 4rem auto;
+    width: 45rem;
+    height: auto;
+  }
+  .restaurant_intro_article img {
+    height: 25rem;
   }
 }
 @media screen and (min-width: 1024px) {
   .running,
 .restaurant_intro_title,
 .restaurant_intro_cards,
+.menu_dish_card,
 .restaurant_img,
-.footer {
+.menu_dishes {
     max-width: 1600px;
     margin: 0 auto;
   }
 
-  .restaurant_menu_header,
-.menu_dish_card,
-.restaurant_img,
-.footer {
-    max-width: 1000px;
+  .running {
+    width: 90%;
+    margin: 0 auto;
   }
 
+  .running_title {
+    text-align: center;
+  }
+
+  .running_main {
+    margin-bottom: 2rem;
+  }
+
+  .running_container {
+    width: 30%;
+  }
+
+  .restaurant_intro_title {
+    margin-bottom: 2rem;
+    width: 45rem;
+    text-align: center;
+  }
+
+  .restaurant_intro_cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .restaurant_intro_article {
+    margin: 2rem auto;
+    width: 38vw;
+    height: auto;
+  }
+  .restaurant_intro_article img {
+    height: 20vw;
+  }
+
+  .restaurant_menu_header {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
   .restaurant_menu_header h2,
 .restaurant_menu_header .like_icon {
     font-size: 3rem;
   }
 
   .menu_dish_card {
-    display: inline-block;
-    margin: 2rem;
     width: 30%;
   }
 
-  .restaurant_menu:not(:first-child, :last-child) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  .footer {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0.5rem 2rem 1.5rem 2rem;
   }
 
   .footer_title {
@@ -586,6 +785,22 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .menu_dish_card {
+    width: 28%;
+  }
+
+  .restaurant_intro_article {
+    width: 34rem;
+  }
+  .restaurant_intro_article img {
+    height: 17rem;
+  }
+
+  .running {
+    width: 80rem;
   }
 }
 
