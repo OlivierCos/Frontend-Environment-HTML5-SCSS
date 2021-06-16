@@ -40,8 +40,8 @@
 
 @keyframes apparition {
   0% {
-    opacity: 0;
     visibility: hidden;
+    opacity: 0;
     transform: translateY(4rem);
   }
   25% {
@@ -55,19 +55,18 @@
   }
 }
 
-@keyframes loading{
-
-    0% {
-        opacity: 1;
-    }
-    99% {
-        opacity: 1;
-    }
-    100% { 
-        opacity: 0;
-        visibility: hidden;
-        display: none; 
-    }
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
 }
 
 @keyframes letter {
@@ -77,22 +76,22 @@
     color: $color-primary;
   }
 
-50% {
+  50% {
     transform: scale(0);
     color: $color-secondary;
   }
 
-25% {
+  25% {
     transform: scale(1);
     color: $color-primary;
   }
 
- 75% {
+  75% {
     transform: scale(1);
     color: $color-secondary;
   }
 
-  100%{
+  100% {
     visibility: hidden;
     display: none;
   }

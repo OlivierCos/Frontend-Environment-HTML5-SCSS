@@ -173,7 +173,7 @@ button {
   cursor: pointer;
 }
 .like_icon:hover i {
-  background: linear-gradient(#9356DC, #FF79DA);
+  background: linear-gradient(#9356dc, #ff79da);
   animation: fillup 1s linear;
   -webkit-text-fill-color: transparent;
   background-clip: unset;
@@ -184,7 +184,7 @@ button {
 }
 .like_icon:focus .fas {
   visibility: visible;
-  background: linear-gradient(#9356DC, #FF79DA);
+  background: linear-gradient(#9356dc, #ff79da);
   -webkit-text-fill-color: transparent;
   background-clip: unset;
   -webkit-background-clip: text;
@@ -198,7 +198,7 @@ button {
   bottom: 0;
   right: 0;
   border-radius: 0 1rem 1rem 0;
-  background: #99E2D0;
+  background: #99e2d0;
   animation: choosen 0.5s;
   transform-origin: right;
   display: none;
@@ -328,8 +328,8 @@ button {
 }
 @keyframes apparition {
   0% {
-    opacity: 0;
     visibility: hidden;
+    opacity: 0;
     transform: translateY(4rem);
   }
   25% {
@@ -358,19 +358,19 @@ button {
 @keyframes letter {
   0%, 100% {
     transform: scale(0);
-    color: #9356DC;
+    color: #9356dc;
   }
   50% {
     transform: scale(0);
-    color: #FF79DA;
+    color: #ff79da;
   }
   25% {
     transform: scale(1);
-    color: #9356DC;
+    color: #9356dc;
   }
   75% {
     transform: scale(1);
-    color: #FF79DA;
+    color: #ff79da;
   }
   100% {
     visibility: hidden;
@@ -386,7 +386,7 @@ button {
   color: #fff;
   font-weight: 600;
   cursor: pointer;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#ff79da, #9356dc);
   box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.15);
   transition: 0.5s;
 }
@@ -490,7 +490,7 @@ a {
 }
 .running_container_number {
   color: #fff;
-  background: #9356DC;
+  background: #9356dc;
   left: -0.6rem;
   position: absolute;
   padding: 0.2rem 0.4rem;
@@ -510,7 +510,7 @@ a {
   background: #f5edff;
 }
 .running_container:hover i {
-  color: #9356DC;
+  color: #9356dc;
 }
 
 .restaurant_intro {
@@ -538,7 +538,7 @@ a {
   position: absolute;
   font-weight: 600;
   color: #008766;
-  background: #99E2D0;
+  background: #99e2d0;
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
   right: 0.6rem;
@@ -643,7 +643,7 @@ footer a {
   text-align: left;
 }
 .menu_dish_title p {
-  color: #99E2D0;
+  color: #99e2d0;
   font-weight: 700;
 }
 
@@ -662,7 +662,8 @@ footer a {
   font-size: 16px;
   text-align: left;
 }
-.menu_dish_container h2, .menu_dish_container .menu_dish_description {
+.menu_dish_container h2,
+.menu_dish_container .menu_dish_description {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;

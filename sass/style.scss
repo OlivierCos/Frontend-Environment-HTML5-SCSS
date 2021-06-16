@@ -140,7 +140,6 @@ a {
   padding-bottom: $padding-description-h2;
 }
 
-
 .restaurant_intro_cards {
   width: $width90;
   margin: $margin-body;
@@ -251,7 +250,7 @@ footer {
     font-size: $font-size-extend-title;
   }
 }
-.menu_dishes{
+.menu_dishes {
   margin: 0 auto;
 }
 
@@ -281,7 +280,8 @@ footer {
     font-size: $font-size-normal;
     text-align: left;
   }
-  & h2, .menu_dish_description {
+  & h2,
+  .menu_dish_description {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
