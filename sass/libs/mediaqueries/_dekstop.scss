@@ -1,6 +1,6 @@
 @media screen and (min-width: 1024px) {
   .running,
-  .restaurant_intro_title,
+  #restaurant_intro_title,
   .restaurant_intro_cards,
   .menu_dish_card,
   .restaurant_img,
@@ -8,7 +8,6 @@
     max-width: 1600px;
     margin: $margin-body;
   }
-
   .running {
     width: 90%;
     margin: 0 auto;
@@ -22,7 +21,7 @@
   .running_container {
     width: 30%;
   }
-  .restaurant_intro_title {
+  #restaurant_intro_title {
     margin-bottom: 2rem;
     width: 45rem;
     text-align: center;
@@ -63,18 +62,16 @@
     justify-content: space-between;
   }
 }
-
-@media screen and (min-width:1200px) {
-.menu_dishes{
-  width: 75%;
+@media screen and (min-width: 1200px) {
+  .menu_dishes {
+    width: 75%;
+  }
 }
-}
-
 @media screen and (min-width: 1440px) {
-  .menu_dishes{
+  .menu_dishes {
     width: 85%;
   }
-  .menu_dish_card{
+  .menu_dish_card {
     width: 28%;
   }
   .restaurant_intro_article {

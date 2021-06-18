@@ -11,6 +11,7 @@
   animation: choosen 0.5s;
   transform-origin: right;
   display: none;
+  height: 105%;
 }
 .menu_dish_container:hover .menu_dish_choosen {
   display: unset;
@@ -21,13 +22,17 @@
   margin-right: 4rem;
 }
 
+.menu_dish_container {
+  overflow: hidden;
+}
+
 //**Animation done**//
 
 .menu_dish_choosen i {
   font-size: 1.7rem;
   position: relative;
   animation: selection 0.5s linear;
-  top: 1.3rem;
+  top: 1.5rem;
   color: $color-fourth;
 }
 //**Animation apparition**//

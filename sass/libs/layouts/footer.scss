@@ -1,0 +1,28 @@
+/***Footer HTML : Page d'accueil et pages restaurants***/
+footer {
+  text-align: left;
+  color: $color-fourth;
+  background-color: $color-footer-background;
+
+  position: relative;
+  & a {
+    color: $color-fourth;
+  }
+}
+.footer {
+  padding: $padding-footer;
+  &_title {
+    font-family: "Shrikhand";
+    padding-bottom: $padding-intro-article-body;
+  }
+  &_element {
+    display: flex;
+    padding: $padding-footer-element;
+    & i {
+      padding-right: $padding-intro-article-body;
+    }
+    & .fa-hands-helping {
+      font-size: $font-size-xsmall;
+    }
+  }
+}

@@ -146,51 +146,6 @@ table {
 /***Restau pages***/
 /***Margin_Variables***/
 /**Ending_Padding&Margin_Variables***/
-/***Like icon***/
-button {
-  border: none;
-  background-color: transparent;
-}
-
-.restaurant_menu_header .like_icon {
-  font-size: 6vw;
-}
-
-.like_icon {
-  transition: transform;
-}
-.like_icon .far {
-  position: absolute;
-}
-.like_icon .fas {
-  visibility: hidden;
-}
-.like_icon:hover .far {
-  visibility: hidden;
-}
-.like_icon:hover .fas {
-  visibility: visible;
-  cursor: pointer;
-}
-.like_icon:hover i {
-  background: linear-gradient(#9356dc, #ff79da);
-  animation: fillup 1s linear;
-  -webkit-text-fill-color: transparent;
-  background-clip: unset;
-  -webkit-background-clip: text;
-}
-.like_icon:focus .far {
-  visibility: hidden;
-}
-.like_icon:focus .fas {
-  visibility: visible;
-  background: linear-gradient(#9356dc, #ff79da);
-  -webkit-text-fill-color: transparent;
-  background-clip: unset;
-  -webkit-background-clip: text;
-}
-
-/***Like icon on index.html***/
 .menu_dish_choosen {
   position: absolute;
   width: 4rem;
@@ -202,6 +157,7 @@ button {
   animation: choosen 0.5s;
   transform-origin: right;
   display: none;
+  height: 105%;
 }
 
 .menu_dish_container:hover .menu_dish_choosen {
@@ -214,11 +170,15 @@ button {
   margin-right: 4rem;
 }
 
+.menu_dish_container {
+  overflow: hidden;
+}
+
 .menu_dish_choosen i {
   font-size: 1.7rem;
   position: relative;
   animation: selection 0.5s linear;
-  top: 1.3rem;
+  top: 1.5rem;
   color: #fff;
 }
 
@@ -242,51 +202,6 @@ button {
 }
 .menu_dish_container_4 {
   animation-delay: 0.52s;
-}
-
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #353535;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  animation: loading 3s forwards;
-  cursor: wait;
-}
-
-.letter {
-  font-family: "Shrikhand";
-  font-size: 2rem;
-  margin: 0.4rem;
-  animation: letter 2.2s linear both;
-}
-
-.letter_1 {
-  animation-delay: 0.1s;
-}
-.letter_2 {
-  animation-delay: 0.2s;
-}
-.letter_3 {
-  animation-delay: 0.3s;
-}
-.letter_4 {
-  animation-delay: 0.4s;
-}
-.letter_5 {
-  animation-delay: 0.5s;
-}
-.letter_6 {
-  animation-delay: 0.6s;
-}
-.letter_7 {
-  animation-delay: 0.7s;
-}
-.letter_8 {
-  animation-delay: 0.8s;
 }
 
 @keyframes fillup {
@@ -333,7 +248,7 @@ button {
     transform: translateY(4rem);
   }
   25% {
-    opacity: 0;
+    opacity: 0.5;
     visibility: visible;
   }
   100% {
@@ -377,6 +292,96 @@ button {
     display: none;
   }
 }
+/***Like icon***/
+.restaurant_menu_header .like_icon {
+  font-size: 6vw;
+}
+
+.like_icon {
+  transition: transform;
+}
+.like_icon .far {
+  position: absolute;
+}
+.like_icon .fas {
+  visibility: hidden;
+}
+.like_icon:hover .far {
+  visibility: hidden;
+}
+.like_icon:hover .fas {
+  visibility: visible;
+  cursor: pointer;
+}
+.like_icon:hover i {
+  background: linear-gradient(#9356dc, #ff79da);
+  animation: fillup 1s linear;
+  -webkit-text-fill-color: transparent;
+  background-clip: unset;
+  -webkit-background-clip: text;
+}
+.like_icon:focus .far {
+  visibility: hidden;
+}
+.like_icon:focus .fas {
+  visibility: visible;
+  background: linear-gradient(#9356dc, #ff79da);
+  -webkit-text-fill-color: transparent;
+  background-clip: unset;
+  -webkit-background-clip: text;
+}
+
+/***Like icon on index.html***/
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #353535;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  animation: loading 3s forwards;
+  cursor: wait;
+}
+
+.letter {
+  font-family: "Shrikhand";
+  font-size: 2rem;
+  margin: 0.4rem;
+  animation: letter 2.2s linear both;
+}
+
+.letter_1 {
+  animation-delay: 0.1s;
+}
+.letter_2 {
+  animation-delay: 0.2s;
+}
+.letter_3 {
+  animation-delay: 0.3s;
+}
+.letter_4 {
+  animation-delay: 0.4s;
+}
+.letter_5 {
+  animation-delay: 0.5s;
+}
+.letter_6 {
+  animation-delay: 0.6s;
+}
+.letter_7 {
+  animation-delay: 0.7s;
+}
+.letter_8 {
+  animation-delay: 0.8s;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
 .btn {
   width: 11.7rem;
   height: 3.1rem;
@@ -396,6 +401,11 @@ button {
   box-shadow: 0px 3px 3px 5px rgba(0, 0, 0, 0.4);
 }
 
+.order_btn {
+  margin: 2rem auto;
+  display: block;
+}
+
 /***Page d'accueil***/
 body {
   scroll-behavior: smooth;
@@ -412,28 +422,6 @@ body {
 a {
   text-decoration: none;
   color: #000;
-}
-
-/***Header***/
-.header_container {
-  position: relative;
-  /***Pages html restaurants***/
-}
-.header_container span {
-  position: absolute;
-  left: 1rem;
-  top: 1.6rem;
-  color: #000;
-  font-size: 1.3rem;
-}
-
-/**Fin page html restaurants***/
-.header_logo {
-  justify-content: center;
-}
-.header_logo img {
-  height: 2rem;
-  padding: 1rem 0;
 }
 
 /***Main***/
@@ -460,9 +448,12 @@ a {
 .explorer_description h2 {
   padding-bottom: 1.5rem;
 }
+.explorer_description button a {
+  color: #fff;
+}
 
 .running_title,
-.restaurant_intro_title {
+#restaurant_intro_title {
   text-align: left;
   font-weight: 600;
   padding: 3rem 0 1rem 0;
@@ -481,7 +472,7 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 1.6rem 0 1.9rem 0;
+  padding: 1.6rem 0 1.6rem 0;
   margin: 0.7rem auto 1rem auto;
   background-color: #f6f6f6;
   border-radius: 1rem;
@@ -518,7 +509,7 @@ a {
   padding-bottom: 2rem;
 }
 
-.restaurant_intro_title {
+#restaurant_intro_title {
   margin-top: 2rem;
   padding-bottom: 1.5rem;
 }
@@ -554,10 +545,11 @@ a {
   border-radius: 0 0 1rem 1rem;
   background-color: #fff;
   text-align: left;
-  padding-left: 1rem;
+  padding: 0 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 .restaurant_intro_article_body h2 {
   padding-top: 0.8rem;
@@ -570,35 +562,6 @@ a {
 .restaurant_intro_article_body button {
   padding-right: 1.5rem;
   font-size: 1.3rem;
-}
-
-/***Footer HTML : Page d'accueil et pages restaurants***/
-footer {
-  text-align: left;
-  color: #fff;
-  background-color: #353535;
-  position: relative;
-}
-footer a {
-  color: #fff;
-}
-
-.footer {
-  padding: 1.5rem 0 2.5rem 1.2rem;
-}
-.footer_title {
-  font-family: "Shrikhand";
-  padding-bottom: 1rem;
-}
-.footer_element {
-  display: flex;
-  padding: 0.3em 0;
-}
-.footer_element i {
-  padding-right: 1rem;
-}
-.footer_element .fa-hands-helping {
-  font-size: 0.7rem;
 }
 
 /***Pages Html Restaurants***/
@@ -674,17 +637,13 @@ footer a {
   justify-content: space-between;
 }
 .menu_dish_container .menu_dish_body {
-  font-size: 16px;
+  font-size: 0.9rem;
   font-weight: 300;
+  line-height: 110%;
 }
 .menu_dish_container .menu_dish_body .menu_dish_price {
   font-weight: 500;
   padding-left: 0.5rem;
-}
-
-.order_btn {
-  margin: 2rem auto;
-  display: block;
 }
 
 @media screen and (min-width: 600px) {
@@ -768,7 +727,7 @@ header {
     margin: 0 auto;
   }
 
-  .restaurant_intro_title {
+  #restaurant_intro_title {
     width: 45rem;
     padding-bottom: 0;
   }
@@ -784,7 +743,7 @@ header {
 }
 @media screen and (min-width: 1024px) {
   .running,
-.restaurant_intro_title,
+#restaurant_intro_title,
 .restaurant_intro_cards,
 .menu_dish_card,
 .restaurant_img,
@@ -810,7 +769,7 @@ header {
     width: 30%;
   }
 
-  .restaurant_intro_title {
+  #restaurant_intro_title {
     margin-bottom: 2rem;
     width: 45rem;
     text-align: center;

@@ -1,0 +1,23 @@
+/***Header***/
+
+.header_container {
+  position: relative;
+
+  /***Pages html restaurants***/
+  & span {
+    position: absolute;
+    left: 1rem;
+    top: 1.6rem;
+    color: #000;
+    font-size: $font-size-large;
+  }
+}
+/**Fin page html restaurants***/
+
+.header_logo {
+  justify-content: center;
+  & img {
+    height: 2rem;
+    padding: $padding-header-logo;
+  }
+}

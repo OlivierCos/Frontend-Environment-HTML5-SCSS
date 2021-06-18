@@ -1,12 +1,8 @@
 /***Like icon***/
-button {
-  border: none;
-  background-color: transparent;
-}
-.restaurant_menu_header{
+.restaurant_menu_header {
   & .like_icon {
     font-size: 6vw;
-}
+  }
 }
 .like_icon {
   transition: transform;
@@ -43,4 +39,3 @@ button {
 }
 
 /***Like icon on index.html***/
-

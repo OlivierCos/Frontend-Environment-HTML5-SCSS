@@ -1,56 +1,15 @@
-@import "libs/reset.scss";
+@import "libs/base/reset.scss";
 /***Minireset Ending here***/
-@import "libs/weight&size.scss";
-@import "libs/padding&margin.scss";
-@import "libs/width&border-radius.scss";
-@import "libs/variables.scss";
-@import "libs/like.scss";
-@import "libs/animations.scss";
-@import "libs/loadingspinner.scss";
-@import "libs/keyframes.scss";
-@import "libs/button.scss";
-
-/***Page d'accueil***/
-
-body {
-  scroll-behavior: smooth;
-  width: $width100;
-  margin: $margin-body;
-  font-family: "Roboto", "sans-serif";
-  font-size: $font-size-normal;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  position: relative;
-}
-a {
-  text-decoration: none;
-  color: #000;
-}
-
-/***Header***/
-
-.header_container {
-  position: relative;
-
-  /***Pages html restaurants***/
-  & span {
-    position: absolute;
-    left: 1rem;
-    top: 1.6rem;
-    color: #000;
-    font-size: $font-size-large;
-  }
-}
-/**Fin page html restaurants***/
-
-.header_logo {
-  justify-content: center;
-  & img {
-    height: 2rem;
-    padding: $padding-header-logo;
-  }
-}
+@import "libs/utils/weightsize.scss";
+@import "libs/utils/paddingmargin.scss";
+@import "libs/utils/widthborderradius.scss";
+@import "libs/utils/colorshadow.scss";
+@import "libs/utils/animations.scss";
+@import "libs/utils/keyframes.scss";
+@import "libs/components/like.scss";
+@import "libs/components/loadingspinner.scss";
+@import "libs/components/button.scss";
+@import "libs/base/bodya.scss";
 
 /***Main***/
 
@@ -77,11 +36,14 @@ a {
     & h2 {
       padding-bottom: $padding-description-h2;
     }
+    & button a {
+      color: $color-fourth;
+    }
   }
 }
 
 .running_title,
-.restaurant_intro_title {
+#restaurant_intro_title {
   text-align: left;
   font-weight: $font-weight-large;
   padding: $padding-title;
@@ -135,7 +97,7 @@ a {
   padding-bottom: $padding-description-block;
 }
 
-.restaurant_intro_title {
+#restaurant_intro_title {
   margin-top: $margin-restau-intro-title;
   padding-bottom: $padding-description-h2;
 }
@@ -170,10 +132,11 @@ a {
     border-radius: $border-radius-bottom;
     background-color: $color-fourth;
     text-align: left;
-    padding-left: $padding-intro-article-body;
+    padding: 0 $padding-intro-article-body;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     & h2 {
       padding-top: $padding-intro-article-body-h2;
       font-weight: $font-weight-large;
@@ -188,37 +151,6 @@ a {
     }
   }
 }
-
-/***Footer HTML : Page d'accueil et pages restaurants***/
-
-footer {
-  text-align: left;
-  color: $color-fourth;
-  background-color: $color-footer-background;
-
-  position: relative;
-  & a {
-    color: $color-fourth;
-  }
-}
-.footer {
-  padding: $padding-footer;
-  &_title {
-    font-family: "Shrikhand";
-    padding-bottom: $padding-intro-article-body;
-  }
-  &_element {
-    display: flex;
-    padding: $padding-footer-element;
-    & i {
-      padding-right: $padding-intro-article-body;
-    }
-    & .fa-hands-helping {
-      font-size: $font-size-xsmall;
-    }
-  }
-}
-
 /***Pages Html Restaurants***/
 
 /***main***/
@@ -292,8 +224,9 @@ footer {
     justify-content: space-between;
   }
   & .menu_dish_body {
-    font-size: $font-size-normal;
+    font-size: $font-size-lsmall;
     font-weight: $font-weight-xsmall;
+    line-height: 110%;
   }
   & .menu_dish_body .menu_dish_price {
     font-weight: $font-weight-normal;
@@ -301,10 +234,5 @@ footer {
   }
 }
 
-.order_btn {
-  margin: $margin-order-btn;
-  display: block;
-}
-
-@import "tablette";
-@import "dekstop";
+@import "libs/mediaqueries/tablette";
+@import "libs/mediaqueries/dekstop";
