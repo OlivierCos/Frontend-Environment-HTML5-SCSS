@@ -266,8 +266,8 @@ table {
   }
   100% {
     opacity: 0;
-    visibility: hidden;
     display: none;
+    visibility: hidden;
   }
 }
 @keyframes letter {
@@ -389,8 +389,8 @@ button {
   border-radius: 3rem;
   border-style: none;
   color: #fff;
-  font-weight: 600;
   cursor: pointer;
+  font-weight: 500;
   background: linear-gradient(#ff79da, #9356dc);
   box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.15);
   transition: 0.5s;
@@ -401,8 +401,14 @@ button {
   box-shadow: 0px 3px 3px 5px rgba(0, 0, 0, 0.4);
 }
 
+.explorer_description .btn {
+  margin: 0 auto;
+  line-height: 3rem;
+}
+
 .order_btn {
   margin: 2rem auto;
+  font-weight: 600;
   display: block;
 }
 
@@ -493,14 +499,14 @@ footer a {
 .explorer_description h1 {
   font-size: 1.3rem;
   font-weight: 600;
-  padding: 0 4rem 0.8rem 4rem;
+  padding: 0 2rem 0.8rem 2rem;
   line-height: 1.2rem;
 }
 .explorer_description h2 {
   padding-bottom: 1.5rem;
 }
-.explorer_description button a {
-  color: #fff;
+.explorer_description a {
+  cursor: inherit;
 }
 
 .running_title,
@@ -529,6 +535,7 @@ footer a {
   border-radius: 1rem;
   box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.15);
   font-weight: 500;
+  cursor: pointer;
 }
 .running_container_number {
   color: #fff;
