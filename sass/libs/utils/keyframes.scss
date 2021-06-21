@@ -70,27 +70,22 @@
 }
 
 @keyframes letter {
-  0%,
-  100% {
+  0% {
     transform: scale(0);
     color: $color-primary;
   }
-
-  50% {
-    transform: scale(0);
-    color: $color-secondary;
-  }
-
   25% {
     transform: scale(1);
     color: $color-primary;
   }
-
+  50% {
+    transform: scale(0);
+    color: $color-secondary;
+  }
   75% {
     transform: scale(1);
     color: $color-secondary;
   }
-
   100% {
     visibility: hidden;
     display: none;

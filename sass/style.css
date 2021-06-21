@@ -271,17 +271,17 @@ table {
   }
 }
 @keyframes letter {
-  0%, 100% {
+  0% {
     transform: scale(0);
+    color: #9356dc;
+  }
+  25% {
+    transform: scale(1);
     color: #9356dc;
   }
   50% {
     transform: scale(0);
     color: #ff79da;
-  }
-  25% {
-    transform: scale(1);
-    color: #9356dc;
   }
   75% {
     transform: scale(1);
@@ -297,9 +297,6 @@ table {
   font-size: 6vw;
 }
 
-.like_icon {
-  transition: transform;
-}
 .like_icon .far {
   position: absolute;
 }
