@@ -346,7 +346,7 @@ table {
   }
 }
 @-webkit-keyframes letter {
-  0% {
+  0%, 100% {
     transform: scale(0);
     color: #9356dc;
   }
@@ -368,7 +368,7 @@ table {
   }
 }
 @keyframes letter {
-  0% {
+  0%, 100% {
     transform: scale(0);
     color: #9356dc;
   }
