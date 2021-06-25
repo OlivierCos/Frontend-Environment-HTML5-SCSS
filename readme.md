@@ -18,7 +18,17 @@ $ npm install –save sass
 ```
 * Pour l'utilisation du préprocesseur Autoprefixer (afin de rajouter automatiquement les webkits des navigateurs webs dès l'ajout d'une propriété) : 
 ```
-$ npm install –save autoprefixer
+$ npm install –save postcss-cli autoprefixer
+```
+### package.json
+* Un fichier package.json a été créé lors de l'initiallisation du projet npm. Afin de faire fonctionner les préprocesseurs installés, veuillez rajouter ces scripts dans le fichier .json (pour des feuilles de style appelées style.scss pour sass et style.css pour le langage css):
+```
+    "sass": "sass sass/style.scss sass/style.css",
+    "sass:watch": "sass sass/style.scss sass/style.css --watch",
+    "autoprefixer": "npx postcss sass/style.css --use autoprefixer -d ./",
+    "autoprefixer:watch": "npx postcss sass/style.css --use autoprefixer -d ./ --watch",
+    "dev": "npm run sass:watch & npm run autoprefixer:watch &",
+    "build": "npm run sass && npm run autoprefixer"
 ```
 
 ***
