@@ -1,4 +1,4 @@
-# <<span style="background-color:orange;">Description du projet :<span> 
+# <span style="background-color:orange;">Description du projet :<span> 
  > Ohmyfood! est une entreprise de commande de repas en ligne. Le concept permet aux utilisateurs de composer leur propre menu et  réduire leur temps d’attente dans 4 restaurants de Paris. Une page d'accueil est également développée.
 
 ***
