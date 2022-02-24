@@ -3,12 +3,17 @@
 
 ***
 
+🛠️ Assurer la cohérence graphique d'un site web
+🛠️ Utiliser un système de gestion de versions pour le suivi du projet et son hébergement
+🛠️ Mettre en œuvre des effets CSS graphiques avancés (SCSS)
+🛠️ Mettre en place son environnement Front-End
+🛠️ Mettre en place une structure de navigation pour un site web
+
 ## Le développement
 ### Sass
 * Réalisé à l'aide de Node.js 
 * Télécharger le dossier node selon votre système d'exploitation sur https://nodejs.org/fr/download/
-* Exécuter!
-* Ouvrez un terminal via Node puis, pour initialliser un projet, tapez:
+* Pour initialliser un projet, tapez sur Node:
 ```
 $ npm init
 ```
@@ -16,7 +21,7 @@ $ npm init
 ```
 $ npm install –save sass
 ```
-* Pour l'utilisation du préprocesseur Autoprefixer (afin de rajouter automatiquement les webkits des navigateurs webs dès l'ajout d'une propriété) : 
+* Pour l'utilisation du préprocesseur Autoprefixer (afin de rajouter automatiquement les webkits des différents navigateurs webs) : 
 ```
 $ npm install –save postcss-cli autoprefixer
 ```
