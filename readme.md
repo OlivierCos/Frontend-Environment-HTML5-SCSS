@@ -44,3 +44,7 @@ $ npm install –save postcss-cli autoprefixer
 
 ## Lien github pages : 
 https://oliviercos.github.io/Frontend-Environment-HTML5-SCSS/
+
+### Maquettes demandées : 
+
+<img alt="Maquette de la page d'accueil demandée" width=45% src="Accueil.png"></img> <img alt="Maquette d'une des pages restaurant demandée" width=45% src="Menu.png"></img>
