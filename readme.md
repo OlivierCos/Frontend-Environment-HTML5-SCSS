@@ -1,4 +1,4 @@
-# <span style="background-color:orange;">Description du projet :<span> 
+# Description du projet :
  > Ohmyfood! est une entreprise de commande de repas en ligne. Le concept permet aux utilisateurs de composer leur propre menu et  réduire leur temps d’attente dans 4 restaurants de Paris. Une page d'accueil est également développée.
 
 ***
@@ -43,4 +43,4 @@ $ npm install –save postcss-cli autoprefixer
 ***
 
 ## Lien github pages : 
-https://oliviercos.github.io/OlivierCostel_3_02062021/
+https://oliviercos.github.io/Frontend-Environment-HTML5-SCSS/
