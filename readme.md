@@ -13,8 +13,20 @@
 
 🛠️ Mettre en place une structure de navigation pour un site web
 
-## Le développement
-### Sass
+
+***
+
+
+## Lien vers pages web réalisées : 
+https://oliviercos.github.io/Frontend-Environment-HTML5-SCSS/
+
+### Maquettes demandées : 
+
+<img alt="Maquette de la page d'accueil demandée" width=45% src="Accueil.png"></img> <img alt="Maquette d'une des pages restaurant demandée" width=45% src="Menu.png"></img>
+
+### Le développement
+#### Sass
+
 * Réalisé à l'aide de Node.js 
 * Télécharger le dossier node selon votre système d'exploitation sur https://nodejs.org/fr/download/
 * Pour initialliser un projet, tapez sur Node:
@@ -29,7 +41,8 @@ $ npm install –save sass
 ```
 $ npm install –save postcss-cli autoprefixer
 ```
-### package.json
+#### package.json
+
 * Un fichier package.json a été créé lors de l'initiallisation du projet npm. Afin de faire fonctionner les préprocesseurs installés, veuillez rajouter ces scripts dans le fichier .json (pour des feuilles de style appelées style.scss pour sass et style.css pour le langage css):
 ```
     "sass": "sass sass/style.scss sass/style.css",
@@ -39,12 +52,3 @@ $ npm install –save postcss-cli autoprefixer
     "dev": "npm run sass:watch & npm run autoprefixer:watch &",
     "build": "npm run sass && npm run autoprefixer"
 ```
-
-***
-
-## Lien github pages : 
-https://oliviercos.github.io/Frontend-Environment-HTML5-SCSS/
-
-### Maquettes demandées : 
-
-<img alt="Maquette de la page d'accueil demandée" width=45% src="Accueil.png"></img> <img alt="Maquette d'une des pages restaurant demandée" width=45% src="Menu.png"></img>
