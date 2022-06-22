@@ -7,7 +7,7 @@
 
 🛠️ Utiliser un système de gestion de versions pour le suivi du projet et son hébergement
 
-🛠️ Mettre en œuvre des effets CSS graphiques avancés (SCSS) et des animations
+🛠️ Mettre en œuvre des effets CSS graphiques avancés (SCSS) telles des animations
 
 🛠️ Mettre en place son environnement Front-End
 
